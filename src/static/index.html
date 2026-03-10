@@ -7,9 +7,41 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <!-- Git 分支動畫背景畫布 -->
+    <canvas id="git-animation"></canvas>
+
     <header>
-      <h1>Mergington High School</h1>
-      <h2>Extracurricular Activities</h2>
+      <!-- 頁首：左側吉祥物 + 標題 + 右側吉祥物 -->
+      <div class="header-layout">
+        <div class="mascots-left">
+          <img
+            class="mascot-img"
+            src="https://octodex.github.com/images/Professortocat_v2.png"
+            alt="Professor Octocat 吉祥物"
+          />
+          <img
+            class="mascot-img"
+            src="https://octodex.github.com/images/original.png"
+            alt="Original Octocat 吉祥物"
+          />
+        </div>
+        <div class="header-title">
+          <h1>Mergington High School</h1>
+          <h2>Extracurricular Activities</h2>
+        </div>
+        <div class="mascots-right">
+          <img
+            class="mascot-img"
+            src="https://octodex.github.com/images/gracehoppertocat.png"
+            alt="Grace Hopper Octocat 吉祥物"
+          />
+          <img
+            class="mascot-img"
+            src="https://octodex.github.com/images/adventure-cat.png"
+            alt="Adventure Cat 吉祥物"
+          />
+        </div>
+      </div>
       <div id="user-controls">
         <div id="user-status">
           <button id="login-button" class="icon-button">
@@ -168,6 +200,7 @@
       </div>
     </div>
 
+    <script src="git-animation.js"></script>
     <script src="app.js"></script>
   </body>
 </html>
