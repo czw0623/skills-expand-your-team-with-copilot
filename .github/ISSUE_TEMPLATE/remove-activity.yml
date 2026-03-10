@@ -1,0 +1,76 @@
+name: 移除社團活動
+description: 申請從網站上移除一個社團或活動
+title: "移除社團：[社團名稱]"
+labels: ["社團管理", "移除項目"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 移除社團申請表單
+        請填寫您想要從網站移除的社團資訊。
+        **注意：** 移除社團將同時移除所有已報名學生的記錄，此操作無法復原，請謹慎確認。
+        標有 * 的欄位為必填項目。
+
+  - type: input
+    id: activity-name
+    attributes:
+      label: 要移除的社團名稱 *
+      description: 請輸入目前在網站上顯示的社團名稱（必須完全一致）
+      placeholder: 例如：Chess Club（請確認與網站上顯示的名稱完全相同）
+    validations:
+      required: true
+
+  - type: textarea
+    id: reason
+    attributes:
+      label: 移除原因 *
+      description: 請說明為何需要移除此社團
+      placeholder: |
+        例如：
+        - 該社團已於本學期結束
+        - 指導老師離職，無法繼續舉辦
+        - 社團合併至其他活動
+    validations:
+      required: true
+
+  - type: dropdown
+    id: removal-type
+    attributes:
+      label: 移除方式 *
+      description: 請選擇您希望如何處理此社團
+      options:
+        - 永久移除（從網站上完全刪除）
+        - 暫時停招（保留社團資訊但停止接受報名）
+    validations:
+      required: true
+
+  - type: input
+    id: effective-date
+    attributes:
+      label: 希望生效日期
+      description: 您希望何時完成移除？若無特定需求可留空
+      placeholder: 例如：2025/06/30（選填）
+
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: 確認事項 *
+      description: 請確認您已了解以下事項
+      options:
+        - label: 我確認要移除此社團，且了解此操作不可復原
+          required: true
+        - label: 我已通知相關學生此社團將被移除（若尚未通知，請先完成通知後再提交申請）
+          required: true
+
+  - type: textarea
+    id: additional-notes
+    attributes:
+      label: 其他備註
+      description: 是否有其他需要說明的事項？
+      placeholder: 選填
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        **提交後說明：** 您的移除申請將由網站管理員審核。審核完成後，網站上將不再顯示該社團。

@@ -1,0 +1,94 @@
+name: 新增社團活動
+description: 申請在網站上新增一個課外活動或社團
+title: "新增社團：[社團名稱]"
+labels: ["新增功能", "社團管理"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 歡迎使用新增社團申請表單
+        請填寫以下資訊，讓我們協助您將新社團加入網站。
+        所有標有 * 的欄位均為必填項目。
+
+  - type: input
+    id: activity-name
+    attributes:
+      label: 社團／活動名稱 *
+      description: 請輸入社團或活動的正式名稱
+      placeholder: 例如：書法社、英語辯論社
+    validations:
+      required: true
+
+  - type: textarea
+    id: activity-description
+    attributes:
+      label: 活動說明 *
+      description: 請簡單介紹這個社團或活動的內容與目標
+      placeholder: 例如：學習毛筆書寫技巧，探索中華文化之美，適合所有對書法有興趣的同學參加。
+    validations:
+      required: true
+
+  - type: input
+    id: schedule
+    attributes:
+      label: 活動時間 *
+      description: 請說明活動的上課日期與時間
+      placeholder: 例如：每週三 下午 3:30 - 5:00
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: days
+    attributes:
+      label: 活動星期 *
+      description: 請至少勾選一個活動舉辦的星期
+      options:
+        - label: 星期一（Monday）
+        - label: 星期二（Tuesday）
+        - label: 星期三（Wednesday）
+        - label: 星期四（Thursday）
+        - label: 星期五（Friday）
+        - label: 星期六（Saturday）
+        - label: 星期日（Sunday）
+    validations:
+      required: true
+
+  - type: input
+    id: start-time
+    attributes:
+      label: 開始時間 *
+      description: 請使用 24 小時制（HH:MM）
+      placeholder: 例如：15:30
+    validations:
+      required: true
+
+  - type: input
+    id: end-time
+    attributes:
+      label: 結束時間 *
+      description: 請使用 24 小時制（HH:MM）
+      placeholder: 例如：17:00
+    validations:
+      required: true
+
+  - type: input
+    id: max-participants
+    attributes:
+      label: 最多人數上限 *
+      description: 這個社團最多可以接受多少名同學報名？
+      placeholder: 例如：20
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional-notes
+    attributes:
+      label: 其他備註
+      description: 是否有其他需要說明的事項？例如：需要特殊設備、限定年級等
+      placeholder: 選填，如有特殊需求請在此說明
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        **提交後說明：** 您的申請將由網站管理員審核，審核完成後社團資訊將顯示在網站上。

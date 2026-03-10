@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 📖 開發手冊
+    url: https://github.com/czw0623/skills-expand-your-team-with-copilot/blob/main/docs/how-to-develop.md
+    about: 查看詳細的開發環境設定說明與貢獻指南
