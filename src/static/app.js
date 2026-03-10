@@ -25,6 +25,43 @@ document.addEventListener("DOMContentLoaded", () => {
   const closeLoginModal = document.querySelector(".close-login-modal");
   const loginMessage = document.getElementById("login-message");
 
+  // 深色模式切換元素
+  const darkModeToggle = document.getElementById("dark-mode-toggle");
+  const darkModeIcon = document.getElementById("dark-mode-icon");
+
+  // 初始化深色模式（根據 localStorage 中儲存的偏好設定，或系統偏好）
+  function initializeDarkMode() {
+    const savedMode = localStorage.getItem("darkMode");
+    // 若有儲存的偏好，以儲存值為準；否則偵測作業系統的深色模式設定
+    const prefersDark =
+      savedMode === "enabled" ||
+      (savedMode === null && window.matchMedia("(prefers-color-scheme: dark)").matches);
+    if (prefersDark) {
+      document.body.classList.add("dark-mode");
+      darkModeIcon.textContent = "☀️";
+    }
+  }
+
+  // 切換深色/淺色模式
+  function toggleDarkMode() {
+    const isDark = document.body.classList.toggle("dark-mode");
+    if (isDark) {
+      localStorage.setItem("darkMode", "enabled");
+      darkModeIcon.textContent = "☀️"; // 深色模式顯示太陽圖示
+    } else {
+      localStorage.setItem("darkMode", "disabled");
+      darkModeIcon.textContent = "🌙"; // 淺色模式顯示月亮圖示
+    }
+  }
+
+  // 綁定深色模式切換按鈕事件（確認元素存在後再綁定）
+  if (darkModeToggle) {
+    darkModeToggle.addEventListener("click", toggleDarkMode);
+  }
+
+  // 在頁面載入時初始化深色模式
+  initializeDarkMode();
+
   // Activity categories with corresponding colors
   const activityTypes = {
     sports: { label: "Sports", color: "#e8f5e9", textColor: "#2e7d32" },
