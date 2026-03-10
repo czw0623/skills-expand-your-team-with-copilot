@@ -1,20 +1,29 @@
-### Copilot Instructions
+# Copilot 指令規範 (Copilot Instructions)
 
-## Development Environment
+## 開發環境 (Development Environment)
 
-For detailed setup and development instructions, please refer to our [Development Guide](../docs/how-to-develop.md).
+關於詳細的安裝步驟與開發說明，請參考我們的 [開發手冊](../docs/how-to-develop.md).
 
-### User Interaction
+### 人員溝通原則 (User Interaction)
 
-Consider the following when communicating with the staff.
+在與工作人員溝通時，請務必遵守以下要點：
 
-- The staff is not technical. Explain in simple terms as much as possible and avoid software jargon.
-- Any new code must be easy to maintain and understand, without significant coding experience.
+* **去技術化語言：** 工作人員並不具備技術背景。請盡可能使用簡單易懂的詞彙進行解釋，並**避免使用軟體開發術語**（例如：非同步、回呼函式、封裝等）。
+* **維護門檻：** 任何新撰寫的代碼都必須具備**高度的可讀性與易維護性**，確保即使沒有深厚程式開發經驗的人員也能看懂邏輯。
 
-## Program architecture
+---
 
-- The website users are the students and teachers. Make sure the user experience is simple.
-- Do not make additional apps or services.
-- Do not make command line tools.
-- Do not create a long single file application. Always use an easy-to-understand directory structure.
-- Only use HTML, CSS, Javascript, and Python. No other languages.
+## 程式架構規範 (Program Architecture)
+
+* **使用者導向：** 本網站的使用者為**學生與老師**。請務必確保使用者體驗 (User Experience) 保持簡單直觀。
+* **禁止額外服務：** 請勿建立額外的應用程式 (Apps) 或微服務 (Services)。
+* **禁止命令列工具：** 請勿製作需要透過終端機指令 (Command Line) 操作的工具。
+* **禁止單一長檔案：** 嚴禁將所有功能寫在同一個長檔案中。請務必使用**易於理解的資料夾結構**來分類檔案。
+* **語言限制：** 僅限使用 **HTML, CSS, JavaScript, 以及 Python**。嚴格禁止使用上述四種以外的程式語言。
+
+---
+
+## 語言與註釋要求 (Language Requirements)
+
+* **中文優先：** 除了必要的技術專有名詞（如：Python, HTML, CSS, JavaScript, VS Code 等）之外，所有說明、註釋及對話請**全程使用中文**。
+* **代碼註釋：** 雖然代碼中的變數命名可以使用英文，但必須附上清楚的中文註釋，解釋該段代碼的功能。
