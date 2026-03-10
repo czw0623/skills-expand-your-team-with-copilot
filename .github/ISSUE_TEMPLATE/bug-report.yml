@@ -1,0 +1,108 @@
+name: 回報程式問題
+description: 網站出現了問題或錯誤，請使用此表單回報
+title: "問題回報：[簡短描述問題]"
+labels: ["程式問題", "待修復"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 問題回報表單
+        感謝您回報問題！請盡量詳細描述您遇到的情況，這將幫助我們更快速地找到並修復問題。
+        標有 * 的欄位為必填項目。
+
+  - type: textarea
+    id: problem-description
+    attributes:
+      label: 問題描述 *
+      description: 請描述您遇到了什麼問題？網站出現了什麼不正常的情況？
+      placeholder: |
+        例如：當我嘗試幫學生報名「西洋棋社」時，畫面出現紅色錯誤訊息，報名沒有成功。
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps-to-reproduce
+    attributes:
+      label: 重現步驟 *
+      description: 請說明如何重現這個問題（一步一步說明您的操作）
+      placeholder: |
+        1. 開啟網站首頁
+        2. 點選「西洋棋社」的「報名」按鈕
+        3. 輸入學生的電子郵件
+        4. 點選確認按鈕
+        5. 畫面顯示錯誤訊息
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: 預期應該發生什麼 *
+      description: 如果功能正常運作，您預期會看到什麼結果？
+      placeholder: 例如：報名成功後，應該顯示「報名成功」的訊息，且學生名單中應該出現該學生的名字。
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual-behavior
+    attributes:
+      label: 實際發生了什麼 *
+      description: 描述問題的實際情況，包括看到的錯誤訊息或異常行為
+      placeholder: 例如：畫面顯示「Internal Server Error」紅色訊息，報名沒有被記錄下來。
+    validations:
+      required: true
+
+  - type: dropdown
+    id: frequency
+    attributes:
+      label: 問題發生頻率 *
+      description: 這個問題每次操作都會發生，還是偶爾才會出現？
+      options:
+        - 每次都會發生
+        - 大部分時候會發生
+        - 偶爾才會發生
+        - 只發生過一次
+    validations:
+      required: true
+
+  - type: dropdown
+    id: affected-feature
+    attributes:
+      label: 影響的功能區域 *
+      description: 這個問題主要影響網站的哪個部分？
+      options:
+        - 社團列表顯示
+        - 學生報名功能
+        - 取消報名功能
+        - 老師登入功能
+        - 網站整體外觀
+        - 其他功能
+    validations:
+      required: true
+
+  - type: input
+    id: device-browser
+    attributes:
+      label: 使用的設備與瀏覽器
+      description: 您使用什麼設備和瀏覽器？（例如：Windows 電腦、Chrome 瀏覽器）
+      placeholder: 例如：MacBook、Safari 瀏覽器（選填）
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: 截圖或錯誤訊息
+      description: 如果您有截圖，可以直接貼上圖片；或者複製貼上螢幕上顯示的錯誤訊息文字
+      placeholder: 選填，可直接拖曳圖片到此處
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: 其他補充說明
+      description: 還有什麼其他資訊可以幫助我們了解這個問題嗎？
+      placeholder: 選填，例如：問題是什麼時候開始出現的、是否在特定時間才會發生等
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        **提交後說明：** 我們收到您的問題回報後，將盡快調查並修復。修復完成後會在此議題中回覆說明。

@@ -1,0 +1,117 @@
+name: 介面改善建議
+description: 建議改善網站的外觀或使用體驗
+title: "介面改善：[簡短描述建議]"
+labels: ["介面改善", "建議"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 介面改善建議表單
+        感謝您提供改善建議！請盡量詳細說明您的想法，這將幫助我們實現您期望的效果。
+        標有 * 的欄位為必填項目。
+
+  - type: textarea
+    id: current-situation
+    attributes:
+      label: 目前的情況 *
+      description: 請描述目前網站在這方面的情況，以及為什麼需要改善
+      placeholder: |
+        例如：目前網站的社團列表全部顯示在一起，學生很難快速找到特定類型的活動（例如體育類或藝術類）。
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed-change
+    attributes:
+      label: 希望的改變 *
+      description: 請描述您希望網站如何改變，越詳細越好
+      placeholder: |
+        例如：
+        希望在社團列表頁面的左側增加篩選選項，讓學生可以按照「活動類型」（體育類、藝術類、學術類）來篩選社團列表。
+        篩選後只顯示符合條件的社團，讓學生更容易找到感興趣的活動。
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: 完成標準 *
+      description: 您認為改善完成後，應該達到什麼效果？（請列出具體可確認的標準）
+      placeholder: |
+        例如：
+        - 頁面左側出現「活動類型」篩選選項
+        - 點選「體育類」後，只顯示體育相關社團
+        - 點選「全部」後，恢復顯示所有社團
+        - 篩選選項在手機上也能正常使用
+    validations:
+      required: true
+
+  - type: dropdown
+    id: affected-area
+    attributes:
+      label: 影響的功能區域 *
+      description: 這個建議主要針對網站的哪個部分？
+      options:
+        - 社團列表頁面
+        - 社團詳細資訊
+        - 學生報名流程
+        - 網站整體色彩與外觀
+        - 網站導覽與操作方式
+        - 手機版面配置
+        - 其他
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: 優先程度 *
+      description: 您認為這個改善有多重要？
+      options:
+        - 非常重要（影響正常使用）
+        - 重要（明顯改善體驗）
+        - 一般（有更好，沒有也可以）
+        - 低優先（未來考慮即可）
+    validations:
+      required: true
+
+  - type: textarea
+    id: user-impact
+    attributes:
+      label: 對使用者的影響
+      description: 這個改善會對哪些人有幫助？會如何幫助他們？
+      placeholder: |
+        例如：
+        - 對學生：更容易找到喜歡的社團，節省瀏覽時間
+        - 對老師：可以快速確認自己負責的社團是否顯示正確
+
+  - type: textarea
+    id: reference
+    attributes:
+      label: 參考範例或靈感來源
+      description: 您是否看過其他網站有類似的功能？可以提供連結或描述
+      placeholder: 例如：學校官網的活動頁面有類似的篩選功能，網址是...（選填）
+
+  - type: textarea
+    id: constraints
+    attributes:
+      label: 限制條件
+      description: 在實作這個改善時，是否有任何需要注意的限制或要求？
+      placeholder: |
+        例如：
+        - 介面必須保持簡潔，不能過於複雜
+        - 手機版也必須正常顯示
+        - 顏色必須符合學校藍白配色（選填）
+
+  - type: textarea
+    id: additional-notes
+    attributes:
+      label: 其他補充說明
+      description: 還有什麼想補充的嗎？
+      placeholder: 選填
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        **提交後說明：** 您的建議將由開發團隊評估。如果被採納，我們會在此議題中說明實作進度。

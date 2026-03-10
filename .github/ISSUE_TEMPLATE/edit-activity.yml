@@ -1,0 +1,102 @@
+name: 修改社團資訊
+description: 申請修改網站上現有社團或活動的資訊
+title: "修改社團資訊：[社團名稱]"
+labels: ["修改功能", "社團管理"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 修改社團資訊申請表單
+        請填寫您想要修改的社團資訊。只需填寫您想要**更改**的欄位，不需要更改的部分可以留空。
+        標有 * 的欄位為必填項目。
+
+  - type: input
+    id: activity-name
+    attributes:
+      label: 要修改的社團名稱 *
+      description: 請輸入目前在網站上顯示的社團名稱（必須完全一致）
+      placeholder: 例如：Chess Club（請確認與網站上顯示的名稱完全相同）
+    validations:
+      required: true
+
+  - type: textarea
+    id: changes-summary
+    attributes:
+      label: 需要修改的項目 *
+      description: 請說明您想要修改哪些內容，以及修改的原因
+      placeholder: |
+        例如：
+        - 活動時間從每週三改為每週四
+        - 人數上限從 15 人增加為 20 人
+        - 原因：場地調整與需求增加
+    validations:
+      required: true
+
+  - type: input
+    id: new-name
+    attributes:
+      label: 新的社團名稱（如有更名需求）
+      description: 若社團名稱需要更改，請在此填寫新名稱；若不需更名請留空
+      placeholder: 選填
+
+  - type: textarea
+    id: new-description
+    attributes:
+      label: 新的活動說明（如需修改）
+      description: 若要更新活動介紹，請填寫完整的新說明文字；若不需修改請留空
+      placeholder: 選填
+
+  - type: input
+    id: new-schedule
+    attributes:
+      label: 新的活動時間說明（如需修改）
+      description: 請填寫完整的新時間說明
+      placeholder: 例如：每週四 下午 3:15 - 5:00（選填）
+
+  - type: checkboxes
+    id: new-days
+    attributes:
+      label: 新的活動星期（如需修改）
+      description: 若要修改活動星期，請勾選修改後的**完整**星期清單（將會取代原有的設定）；若無變動請勿勾選任何項目
+      options:
+        - label: 星期一（Monday）
+        - label: 星期二（Tuesday）
+        - label: 星期三（Wednesday）
+        - label: 星期四（Thursday）
+        - label: 星期五（Friday）
+        - label: 星期六（Saturday）
+        - label: 星期日（Sunday）
+
+  - type: input
+    id: new-start-time
+    attributes:
+      label: 新的開始時間（如需修改）
+      description: 請使用 24 小時制（HH:MM）
+      placeholder: 例如：15:15（選填）
+
+  - type: input
+    id: new-end-time
+    attributes:
+      label: 新的結束時間（如需修改）
+      description: 請使用 24 小時制（HH:MM）
+      placeholder: 例如：17:00（選填）
+
+  - type: input
+    id: new-max-participants
+    attributes:
+      label: 新的人數上限（如需修改）
+      description: 若人數上限有變動，請填寫新的數字
+      placeholder: 例如：25（選填）
+
+  - type: textarea
+    id: reason
+    attributes:
+      label: 修改原因
+      description: 請簡要說明為何需要進行這些修改，有助於快速處理您的申請
+      placeholder: 選填，例如：場地更換、學期活動調整等
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        **提交後說明：** 您的修改申請將由網站管理員審核並更新，審核完成後網站上的資訊將會更新。
